@@ -1,53 +1,38 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" SETS
-set number								" line number
-set termguicolors							" enable true colors support
-
-syntax enable
-filetype plugin indent on
-
-let mapleader = ";"							" leader key
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" VIM PLUG
 call plug#begin('~/.vim/plugged')
 
-	Plug 'NLKNguyen/papercolor-theme'				" VIM theme
-
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }		" VIM FZF
 	Plug 'junegunn/fzf'						" VIM FZF
-	
 	Plug 'vim-airline/vim-airline'					" VIM Statusbar
 	Plug 'vim-airline/vim-airline-themes'
-	
-	Plug 'tpope/vim-fugitive'					" VIM git
-	Plug 'stsewd/fzf-checkout.vim'					" VIM git
-	
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}			" VIM coc 
-	Plug 'vim-syntastic/syntastic'					" VIM syntastic
 	Plug 'rust-lang/rust.vim'					" VIM Rust
+	Plug 'morhetz/gruvbox'
 
 call plug#end()
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" airline
-let g:airline#extensions#whitespace#enabled = 0
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" SETS
+let mapleader = ";"							" leader key
+"set termguicolors							" enable true colors support
+set rnu								" line number
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+syntax enable
+filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" Theme
 set background=dark
-colorscheme PaperColor
-let g:airline_theme='papercolor'
+colorscheme gruvbox
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" plug setting
+let g:coc_disable_startup_warning = 1
+let g:airline#extensions#whitespace#enabled = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" others
+nnoremap <F1>e :e $MYVIMRC<CR>
+nnoremap <F1>r :source $MYVIMRC<CR>
+nnoremap <F2> :FZF<CR>
+nnoremap <F3> :!cargo fmt<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" COC
 " TextEdit might fail if hidden is not set.

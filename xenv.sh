@@ -35,10 +35,19 @@ fi
 
 
 CARGO=$HOME/.cargo/bin
-SXX=$HOME/.config/appdata/xmachine/scripts
-BXX=$HOME/.config/appdata/localbin
-NVIM=$HOME/.config/appdata/neovim
-NODE=$HOME/.config/appdata/node/bin
-YDL=$HOME/.config/appdata/youtube-dl
 
-PATH=$PATH:$SXX:$BXX:$CARGO:$NVIM:$NODE:$YD
+BXX=$HOME/.config/appdata/xmachine/git_wkdir/
+SXX=$BXX/scripts
+CXX=$BXX/target/release
+
+LWM=$BXX/leftwm/target/release
+
+NODE=$HOME/.config/appdata/node/bin
+
+NVIM=$HOME/.config/appdata/nvim/squashfs-root/usr/bin
+
+PATH=$PATH:$CARGO:$LWM:$BXX:$SXX:$CXX:$NODE:$NVIM
+
+alias vim="nvim"
+alias ls="exa"
+alias cat="bat"
