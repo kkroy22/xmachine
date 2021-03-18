@@ -1,6 +1,6 @@
 modkey = "Mod4"
 workspaces = []
-tags = ["shell", "web", "code", "music", "hydro", "walk"]
+tags = ["web", "code", "shell", "hydro", "walk", "obs"]
 
 [[keybind]]
 command = "Execute"

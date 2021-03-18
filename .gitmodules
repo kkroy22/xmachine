@@ -1,0 +1,30 @@
+[submodule "git_wkdir/bat"]
+	path = git_wkdir/bat
+	url = https://github.com/sharkdp/bat.git
+[submodule "git_wkdir/exa"]
+	path = git_wkdir/exa
+	url = https://github.com/ogham/exa.git
+[submodule "git_wkdir/leftwm"]
+	path = git_wkdir/leftwm
+	url = https://github.com/leftwm/leftwm.git
+[submodule "git_wkdir/lsd"]
+	path = git_wkdir/lsd
+	url = https://github.com/Peltoche/lsd.git
+[submodule "git_wkdir/tokei"]
+	path = git_wkdir/tokei
+	url = https://github.com/XAMPPRocky/tokei.git
+[submodule "git_wkdir/bottom"]
+	path = git_wkdir/bottom
+	url = https://github.com/ClementTsang/bottom.git
+[submodule "git_wkdir/hyperfine"]
+	path = git_wkdir/hyperfine
+	url = https://github.com/sharkdp/hyperfine.git
+[submodule "git_wkdir/procs"]
+	path = git_wkdir/procs
+	url = https://github.com/dalance/procs.git
+[submodule "git_wkdir/skim"]
+	path = git_wkdir/skim
+	url = https://github.com/lotabout/skim.git
+[submodule "git_wkdir/tock"]
+	path = git_wkdir/tock
+	url = https://github.com/nwtnni/tock.git

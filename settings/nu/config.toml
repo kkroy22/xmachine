@@ -1,0 +1,3 @@
+#path = ["/usr/local/bin", "/usr/bin", "/bin", "/usr/local/games", "/usr/games", "", "/home/kroy/.config/appdata/xmachine/git_wkdir/leftwm/target/release", "/home/kroy/.config/appdata/xmachine/git_wkdir", "/home/kroy/.config/appdata/xmachine/git_wkdir/scripts", "/home/kroy/.config/appdata/xmachine/git_wkdir/target/release", "/home/kroy/.config/appdata/local_bin", "/home/kroy/.config/appdata/node/bin", "/home/kroy/.config/appdata/nvim/squashfs-root/usr/bin"]
+
+prompt = "starship prompt"

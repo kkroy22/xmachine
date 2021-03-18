@@ -12,22 +12,21 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" SETS
-let mapleader = ";"							" leader key
-"set termguicolors							" enable true colors support
-set rnu								" line number
-autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
-syntax enable
-filetype plugin indent on
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" Theme
 set background=dark
 colorscheme gruvbox
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" plug setting
-let g:coc_disable_startup_warning = 1
-let g:airline#extensions#whitespace#enabled = 0
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" SETS
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+" au VimEnter * vsplit
+let mapleader = ";"							" leader key
+set rnu								" line number
+syntax enable
+filetype plugin indent on
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" plug setting
+"let g:coc_disable_startup_warning = 1
+let g:airline#extensions#whitespace#enabled = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" others
 nnoremap <F1>e :e $MYVIMRC<CR>
 nnoremap <F1>r :source $MYVIMRC<CR>

@@ -34,20 +34,23 @@ else
 fi
 
 
-CARGO=$HOME/.cargo/bin
-
-BXX=$HOME/.config/appdata/xmachine/git_wkdir/
+BXX=$HOME/.config/appdataARGO=$HOME/.cargo/bin
+LXX=$HOME/.config/appdata/local_bin
+BXX=$HOME/.config/appdata/xmachine/git_wkdir
 SXX=$BXX/scripts
 CXX=$BXX/target/release
 
 LWM=$BXX/leftwm/target/release
 
+CARGO=$HOME/.cargo/bin
+
 NODE=$HOME/.config/appdata/node/bin
 
 NVIM=$HOME/.config/appdata/nvim/squashfs-root/usr/bin
 
-PATH=$PATH:$CARGO:$LWM:$BXX:$SXX:$CXX:$NODE:$NVIM
+PATH=$PATH:$CARGO:$LWM:$BXX:$SXX:$CXX:$LXX:$NODE:$NVIM
 
+eval "$(starship init bash)"
 alias vim="nvim"
 alias ls="exa"
 alias cat="bat"
