@@ -41,6 +41,7 @@ SXX=$BXX/scripts
 CXX=$BXX/target/release
 
 LWM=$BXX/leftwm/target/release
+RGP=$BXX/ripgrep/target/release
 
 CARGO=$HOME/.cargo/bin
 
@@ -48,9 +49,10 @@ NODE=$HOME/.config/appdata/node/bin
 
 NVIM=$HOME/.config/appdata/nvim/squashfs-root/usr/bin
 
-PATH=$PATH:$CARGO:$LWM:$BXX:$SXX:$CXX:$LXX:$NODE:$NVIM
+PATH=$PATH:$CARGO:$LWM:$BXX:$SXX:$CXX:$LXX:$NODE:$NVIM:$RGP
 
 eval "$(starship init bash)"
+alias vi="nvim"
 alias vim="nvim"
-alias ls="exa"
-alias cat="bat"
+alias co="vim Cargo.toml"
+alias gg="git status"

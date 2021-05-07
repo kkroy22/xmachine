@@ -1,17 +1,17 @@
 [workspace]
 members = [
+	"procs", #3
 	"bat",  # 6
 	"lsd",  # 17
-	"exa",  # 297
 	"bottom", #32
 	"hyperfine", # 74
-	"procs", #3
 	"skim", #148
-	"tokei", #4
+	"exa",  # 297
 	"lemoninfo",
-	"tock"
+	"tock",
 ]
 
 exclude = [ 
 	"leftwm",
+    "ripgrep",
 ]
