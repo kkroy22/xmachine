@@ -1,0 +1,56 @@
+;; ======================================= POLYBAR CONFIG ====================================
+[colors]
+background = #2E3440
+foreground = #e6e6e6
+accent     = #88C0D0
+black       = ${xrdb:Polybar.color0}
+red         = ${xrdb:Polybar.color1}
+green       = ${xrdb:Polybar.color2}
+yellow      = ${xrdb:Polybar.color3}
+blue        = ${xrdb:Polybar.color4}
+magenta     = ${xrdb:Polybar.color5}
+cyan        = ${xrdb:Polybar.color6}
+white       = ${xrdb:Polybar.color7}
+
+;; ===================== BARS ========================
+[bar/main]
+bottom = false
+offset-y = 1
+height = 25
+radius = 5
+fixed-center = true
+wm-restack = bspwm
+override-redirect = true
+border = 0
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = termsyn:size=8;3
+font-1 = Roboto Mono NerdFont:size=11:antialias=true;3
+
+module-margin-left = 2
+module-margin-right = 2
+
+;; ===================== ONE ========================
+[bar/one]
+inherit = bar/main
+width = 10%
+offset-x = 1
+modules-center = time 
+
+;; =================== TIME =====================
+
+[module/time]
+type = internal/date
+interval = 1
+date = %a, %d %B
+time = %I:%M %
+format-prefix = 
+format-prefix-foreground = ${colors.accent}
+format = <label>
+label = "  %date% | %time% "
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+
+;; ================= EOF =======================

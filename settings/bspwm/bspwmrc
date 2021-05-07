@@ -1,0 +1,18 @@
+#! /bin/sh
+
+sxhkd -c /home/tde/.config/sxhkd/sxhkdrc &
+compton &
+feh --bg-fill --randomize ~/Downloads/wallpaper/* &
+$HOME/.config/polybar/launch.sh &
+
+bspc monitor -d I II III IV V
+
+bspc config border_width         0
+bspc config window_gap           2 
+bspc config split_ratio          0.618
+bspc config top_padding          27
+bspc config normal_border_color "#2e3440"
+bspc config focused_border_color "#2e3440"
+
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
