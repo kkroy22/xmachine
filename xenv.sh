@@ -1,6 +1,6 @@
 GIT_REPO="$HOME/.config/appdata/xmachine"
 
-XUR="kroy"
+XUR="tde"
 CUR="$(whoami)"
 
 if [ "$USER" != $XUR ]; then

@@ -2,7 +2,7 @@
 
 sxhkd -c /home/tde/.config/sxhkd/sxhkdrc &
 compton &
-$HOME/.config/bspwm/bg.sh &
+$HOME/.config/feh/bg.sh &
 $HOME/.config/polybar/launch.sh &
 
 bspc monitor -d I II III IV V

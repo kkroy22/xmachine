@@ -1,0 +1,37 @@
+add_newline = true
+
+format = """$jobs$time$username$directory$cmd_duration$line_break$character"""
+
+[jobs]
+threshold = 1
+format = "[$number$symbol]($style)"
+symbol = "⏎ "
+style = "bold blue"
+disabled=false
+
+[time]
+time_format = "%T"
+format = "$time($style) ◕ "
+style = "bright-white"
+disabled=false
+
+[username]
+style_user = "bold dimmed blue"
+show_always = true 
+
+[cmd_duration]
+min_time = 2_000 
+style = "bold yellow"
+format = "-took [$duration]($style)"
+
+[line_break]
+disabled = false
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vicmd_symbol = "[❮](bold green)"
+
+[package]
+disabled = true
+
