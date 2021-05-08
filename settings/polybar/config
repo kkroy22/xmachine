@@ -36,7 +36,7 @@ module-margin-right = 2
 [bar/one]
 inherit = bar/main
 width = 10%
-offset-x = 1
+offset-x = 2
 modules-center = time 
 
 ;; =================== TIME =====================
