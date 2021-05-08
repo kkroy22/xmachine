@@ -42,14 +42,17 @@ CXX=$BXX/target/release
 
 LWM=$BXX/leftwm/target/release
 RGP=$BXX/ripgrep/target/release
+SXHKD=$HOME/.config/sxhkd/sxhkdrc
 
 CARGO=$HOME/.cargo/bin
 
 NODE=$HOME/.config/appdata/node/bin
 
 NVIM=$HOME/.config/appdata/nvim/squashfs-root/usr/bin
+JAVA_HOME=$HOME/.config/appdata/jdk
+DBEAVER=$HOME/.config/appdata/dbeaver
 
-PATH=$PATH:$CARGO:$LWM:$BXX:$SXX:$CXX:$LXX:$NODE:$NVIM:$RGP
+PATH=$PATH:$CARGO:$LWM:$BXX:$SXX:$CXX:$LXX:$NODE:$NVIM:$RGP:$JAVA_HOME/bin:$DBEAVER
 
 eval "$(starship init bash)"
 alias vi="nvim"

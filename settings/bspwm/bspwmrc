@@ -1,6 +1,6 @@
 #! /bin/sh
 
-sxhkd -c /home/tde/.config/sxhkd/sxhkdrc &
+sxhkd -c $SXHKD &
 compton &
 $HOME/.config/feh/bg.sh &
 $HOME/.config/polybar/launch.sh &
