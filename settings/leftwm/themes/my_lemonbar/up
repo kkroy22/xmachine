@@ -43,3 +43,5 @@ echo "LoadTheme $SCRIPTPATH/theme.toml" > $XDG_RUNTIME_DIR/leftwm/commands.pipe
 ##   # $SCRIPTPATH/lemonbar.sh | lemonbar -bg $size -F#FFFFFFFF&
 ##   lemoninfo | lemonbar -bg 450x34+1470+0
 ##done
+compton &
+$HOME/.config/feh/bg.sh &
