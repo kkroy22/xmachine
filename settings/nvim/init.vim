@@ -55,4 +55,4 @@ nnoremap <leader>f :RustFmt<CR>
 
 syntax on
 filetype plugin indent on
-autocmd vimenter * hi EndOfBuffer ctermfg=black  ctermbg=black guifg=black guibg=black
+autocmd vimenter * hi EndOfBuffer ctermfg=none  ctermbg=none guifg=none guibg=none
