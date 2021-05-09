@@ -1,9 +1,7 @@
 [usr_var]
 ;(screen - ((screen * 0.75) + 2))
-wifi_n = wlp5s0
-bar_2_x_offset = 339
-;wifi_n = wlp5s0
-;bar_2_x_offset = 408
+wifi_n = wls8
+bar_2_x_offset = 920
 
 [colors]
 background = #2E3440
@@ -35,15 +33,15 @@ module-margin-right = 2
 
 [bar/one]
 inherit = bar/main
-width = 16%
+width = 12%
 offset-x = 2
 modules-center = time
 
 [bar/two]
 inherit = bar/main
-width = 75%
+width = 52%
 offset-x = ${usr_var.bar_2_x_offset} 
-modules-center = network tz3h4t1 tz0h0t1 tz2h2t1 tz2h2t2 tz2h2t3 cpu memory battery
+modules-center = network tz0h0t1 tz1h1t1 tz2h2t1 tz3h2t2 tz4h2t3 tz5h2t3 tz6h3t1 tz6h3t2 tz6h3t3 tz7h4t1 cpu memory
 
 [module/temperature]
 type = internal/temperature
@@ -59,30 +57,55 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = #f00
 
-[module/tz3h4t1]
-inherit = module/temperature
-thermal-zone = 3
-hwmon-path = /sys/devices/virtual/thermal/thermal_zone3/hwmon4/temp1_input
-
 [module/tz0h0t1]
 inherit = module/temperature
 thermal-zone = 0
 hwmon-path = /sys/devices/virtual/thermal/thermal_zone0/hwmon0/temp1_input 
 
+[module/tz1h1t1]
+inherit = module/temperature
+thermal-zone = 1
+hwmon-path = /sys/devices/virtual/thermal/thermal_zone1/hwmon1/temp1_input 
+
 [module/tz2h2t1]
 inherit = module/temperature
 thermal-zone = 2
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp1_input 
 
-[module/tz2h2t2]
+[module/tz3h2t2]
 inherit = module/temperature
-thermal-zone = 2
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp2_input
+thermal-zone = 3
+hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp2_input 
 
-[module/tz2h2t3]
+[module/tz4h2t3]
 inherit = module/temperature
-thermal-zone = 2
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp3_input
+thermal-zone = 4
+hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp3_input 
+
+[module/tz5h2t4]
+inherit = module/temperature
+thermal-zone = 5
+hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp4_input
+
+[module/tz6h3t1]
+inherit = module/temperature
+thermal-zone = 6
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input 
+
+[module/tz6h3t2]
+inherit = module/temperature
+thermal-zone = 6
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp2_input 
+
+[module/tz6h3t3]
+inherit = module/temperature
+thermal-zone = 6
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp3_input 
+
+[module/tz7h4t1]
+inherit = module/temperature
+thermal-zone = 7
+hwmon-path = /sys/devices/virtual/thermal/thermal_zone7/hwmon4/temp1_input 
 
 [module/time]
 type = internal/date
