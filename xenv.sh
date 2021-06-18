@@ -44,16 +44,16 @@ CXX=$BXX/target/release
 LWM=$BXX/leftwm/target/release
 RGP=$BXX/ripgrep/target/release
 SXHKD=$HOME/.config/sxhkd/sxhkdrc
-
 CARGO=$HOME/.cargo/bin
+NVIM=$HOME/.config/appdata/nvim/squashfs-root/usr/bin
 
 NODE=$HOME/.config/appdata/node/bin
-
-NVIM=$HOME/.config/appdata/nvim/squashfs-root/usr/bin
 JAVA_HOME=$HOME/.config/appdata/jdk
 DBEAVER=$HOME/.config/appdata/dbeaver
+INSOMNIA=$HOME/.config/appdata/insomnia
+WRITE=$HOME/.config/appdata/write
 
-PATH=$PATH:$CARGO:$LWM:$BXX:$SXX:$CXX:$LXX:$NODE:$NVIM:$RGP:$JAVA_HOME/bin:$DBEAVER
+PATH=$PATH:$CARGO:$LWM:$BXX:$SXX:$CXX:$LXX:$NODE:$NVIM:$RGP:$WRITE:$JAVA_HOME/bin:$DBEAVER:$INSOMNIA
 
 eval "$(starship init bash)"
 alias vi="nvim"

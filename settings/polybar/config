@@ -1,7 +1,7 @@
 [usr_var]
 ;(screen - ((screen * 0.75) + 2))
-wifi_n = wlp5s0
-bar_2_x_offset = 408
+wifi_n = wls8
+bar_2_x_offset = 747
 
 [colors]
 background = #2E3440
@@ -39,9 +39,30 @@ modules-center = time
 
 [bar/two]
 inherit = bar/main
-width = 70%
+width = 61%
 offset-x = ${usr_var.bar_2_x_offset} 
-modules-center = network tz0h0t1 tz2h2t1 tz2h2t2 tz2h2t3 cpu memory battery
+modules-center = xwksp network tz0h0t1 tz1h1t1 tz2h2t1 tz3h2t2 tz4h2t3 tz5h2t4 tz6h3t1 tz6h3t2 tz6h3t3 tz7h4t1 cpu memory
+
+[module/xwksp]
+type = internal/xworkspaces
+pin-workspaces = true
+; $ xprop -root _NET_DESKTOP_NAMES
+label-empty =
+label-urgent = 
+label-occupied =
+label-monitor =
+format = <label-state>
+label-active = %icon%
+icon-0 = 0;0 
+icon-1 = I;[1]
+icon-2 = II;[2]
+icon-3 = III;[3]
+icon-4 = IV;[4]
+icon-5 = V;[5]
+icon-6 = VI;[6]
+icon-7 = VII;[7]
+icon-8 = VIII;[8]
+icon-9 = IX;[9]
 
 [module/temperature]
 type = internal/temperature
@@ -53,29 +74,87 @@ warn-temperature = 60
 units = false
 format = <label>
 format-warn = <label-warn>
-label = %temperature-c%
-label-warn = %temperature-c%
 label-warn-foreground = #f00
 
 [module/tz0h0t1]
 inherit = module/temperature
 thermal-zone = 0
-hwmon-path = /sys/devices/virtual/thermal/thermal_zone0/hwmon0/temp1_input 
+;acpitz
+hwmon-path = /sys/devices/virtual/thermal/thermal_zone0/hwmon0/temp1_input
+label = 01%temperature-c%
+label-warn = 01%temperature-c%
+
+[module/tz1h1t1]
+inherit = module/temperature
+thermal-zone = 1
+;pch_skylake
+hwmon-path = /sys/devices/virtual/thermal/thermal_zone1/hwmon1/temp1_input 
+label = 11%temperature-c%
+label-warn = 11%temperature-c%
 
 [module/tz2h2t1]
 inherit = module/temperature
 thermal-zone = 2
+;TMEM CPU
+hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp1_input
+label = 21%temperature-c%
+label-warn = 21%temperature-c%
+
+[module/tz3h2t2]
+inherit = module/temperature
+thermal-zone = 3
+;TSKN AMBIENT
+hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp2_input 
+label = 31%temperature-c%
+label-warn = 31%temperature-c%
+
+[module/tz4h2t3]
+inherit = module/temperature
+thermal-zone = 4
+;INT3400 Thermal SODIUM
+hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp3_input
+label = 41%temperature-c%
+label-warn = 41%temperature-c%
+
+[module/tz5h2t4]
+inherit = module/temperature
+thermal-zone = 5
+;B0D4 OTHER
+hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp4_input
+label = 51%temperature-c%
+label-warn = 51%temperature-c%
+
+[module/tz6h3t1]
+inherit = module/temperature
+thermal-zone = 6
+;x86_pkg_temp
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+label = 61%temperature-c%
+label-warn = 61%temperature-c%
 
 [module/tz2h2t2]
 inherit = module/temperature
-thermal-zone = 2
+thermal-zone = 6
+;x86_pkg_temp
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp2_input
+label = 62%temperature-c%
+label-warn = 62%temperature-c%
+
+[module/tz6h3t3]
+inherit = module/temperature
+thermal-zone = 6
+;x86_pkg_temp
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp3_input 
+label = 63%temperature-c%
+label-warn = 63%temperature-c%
 
 [module/tz2h2t3]
 inherit = module/temperature
-thermal-zone = 2
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp3_input
+thermal-zone = 7
+;iwlwifi_1
+hwmon-path = /sys/devices/virtual/thermal/thermal_zone7/hwmon4/temp1_input 
+label = 71%temperature-c%
+label-warn = 71%temperature-c%
 
 [module/time]
 type = internal/date
