@@ -9,6 +9,7 @@ members = [
 	"exa",  # 297
 	"lemoninfo",
 	"tock",
+	"mdcat",
 ]
 
 exclude = [ 

@@ -34,3 +34,6 @@
 [submodule "git_wkdir/ripgrep"]
 	path = git_wkdir/ripgrep
 	url = https://github.com/BurntSushi/ripgrep.git
+[submodule "git_wkdir/mdcat"]
+	path = git_wkdir/mdcat
+	url = https://github.com/lunaryorn/mdcat.git

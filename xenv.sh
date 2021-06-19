@@ -35,28 +35,27 @@ else
 fi
 
 
-BXX=$HOME/.config/appdataARGO=$HOME/.cargo/bin
-LXX=$HOME/.config/appdata/local_bin
-BXX=$HOME/.config/appdata/xmachine/git_wkdir
-SXX=$BXX/scripts
-CXX=$BXX/target/release
+BXX=$HOME/.config/appdata
+GXX=$BXX/xmachine/git_wkdir
+
+LXX=$BXX/local_bin
+CARGO=$HOME/.cargo/bin
+CXX=$GXX/target/release
+SXX=$GXX/scripts
+SXHKD=$HOME/.config/sxhkd/sxhkdrc
+NVIM=$HOME/.config/appdata/nvim/squashfs-root/usr/bin
+NODE=$HOME/.config/appdata/node/bin
+JAVA_HOME=$HOME/.config/appdata/jdk
+WRITE=$HOME/.config/appdata/write
 
 LWM=$BXX/leftwm/target/release
 RGP=$BXX/ripgrep/target/release
-SXHKD=$HOME/.config/sxhkd/sxhkdrc
-CARGO=$HOME/.cargo/bin
-NVIM=$HOME/.config/appdata/nvim/squashfs-root/usr/bin
-
-NODE=$HOME/.config/appdata/node/bin
-JAVA_HOME=$HOME/.config/appdata/jdk
 DBEAVER=$HOME/.config/appdata/dbeaver
-INSOMNIA=$HOME/.config/appdata/insomnia
-WRITE=$HOME/.config/appdata/write
 
-PATH=$PATH:$CARGO:$LWM:$BXX:$SXX:$CXX:$LXX:$NODE:$NVIM:$RGP:$WRITE:$JAVA_HOME/bin:$DBEAVER:$INSOMNIA
+PATH=$PATH:$LXX:$CARGO:$CXX:$SXX:$SXHKD:$NVIM:$NODE:$JAVA_HOME/bin:$WRITE:$LWM:$RGP:$DBEAVER
 
 eval "$(starship init bash)"
 alias vi="nvim"
 alias vim="nvim"
-alias co="vim Cargo.toml"
-alias gg="git status"
+alias co="vim ."
+alias gg="cd $GIT_REPO"

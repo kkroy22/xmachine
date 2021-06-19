@@ -11,31 +11,6 @@ call plug#end()
 set background=dark
 colorscheme gruvbox
 
-"set nowrap
-"set noruler
-"set nonumber
-"set noshowcmd
-"set noshowmode
-"set noswapfile
-"set nohlsearch
-"set nopreviewwindow
-"set norelativenumber
-"set hidden
-"set expandtab
-"set incsearch
-"set ignorecase
-"set smartcase
-"set smartindent
-"set splitright
-"set splitbelow
-"set tabstop=4
-"set shiftwidth=4
-"set cmdheight=1
-"set laststatus=0
-"set backspace=indent,eol,start
-"set mouse=
-"set guicursor=
-
 let mapleader = ";"	
 noremap <F1> :echo "--- F1 ---"<CR>
 nnoremap <leader>1 :e $MYVIMRC<CR>
