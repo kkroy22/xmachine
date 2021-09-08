@@ -42,20 +42,22 @@ LXX=$BXX/local_bin
 CARGO=$HOME/.cargo/bin
 CXX=$GXX/target/release
 SXX=$GXX/scripts
+
 SXHKD=$HOME/.config/sxhkd/sxhkdrc
 NVIM=$HOME/.config/appdata/nvim/squashfs-root/usr/bin
 NODE=$HOME/.config/appdata/node/bin
-JAVA_HOME=$HOME/.config/appdata/jdk
-WRITE=$HOME/.config/appdata/write
 
-LWM=$BXX/leftwm/target/release
-RGP=$BXX/ripgrep/target/release
-DBEAVER=$HOME/.config/appdata/dbeaver
+SHP=$GXX/starship/target/release
+LWM=$GXX/leftwm/target/release
+RGP=$GXX/ripgrep/target/release
+OOT=$GXX/broot/target/release
 
-PATH=$PATH:$LXX:$CARGO:$CXX:$SXX:$SXHKD:$NVIM:$NODE:$JAVA_HOME/bin:$WRITE:$LWM:$RGP:$DBEAVER
+CODE=$HOME/.config/appdata/vscode
+GKRN=$HOME/.config/appdata/gitkraken
+
+PATH=$PATH:$LXX:$CARGO:$CXX:$SXX:$SXHKD:$NVIM:$NODE:$SHP:$LWM:$RGP:$OOT:$CODE:$GKRN
 
 eval "$(starship init bash)"
 alias vi="nvim"
 alias vim="nvim"
-alias co="vim ."
 alias gg="cd $GIT_REPO"

@@ -10,9 +10,6 @@
 [submodule "git_wkdir/lsd"]
 	path = git_wkdir/lsd
 	url = https://github.com/Peltoche/lsd.git
-[submodule "git_wkdir/tokei"]
-	path = git_wkdir/tokei
-	url = https://github.com/XAMPPRocky/tokei.git
 [submodule "git_wkdir/bottom"]
 	path = git_wkdir/bottom
 	url = https://github.com/ClementTsang/bottom.git
@@ -28,12 +25,27 @@
 [submodule "git_wkdir/tock"]
 	path = git_wkdir/tock
 	url = https://github.com/nwtnni/tock.git
-[submodule "git_wkdir/delta"]
-	path = git_wkdir/delta
-	url = https://github.com/dandavison/delta.git
 [submodule "git_wkdir/ripgrep"]
 	path = git_wkdir/ripgrep
 	url = https://github.com/BurntSushi/ripgrep.git
 [submodule "git_wkdir/mdcat"]
 	path = git_wkdir/mdcat
 	url = https://github.com/lunaryorn/mdcat.git
+[submodule "git_wkdir/fd"]
+	path = git_wkdir/fd
+	url = https://github.com/sharkdp/fd
+[submodule "git_wkdir/xplr"]
+	path = git_wkdir/xplr
+	url = https://github.com/sayanarijit/xplr
+[submodule "git_wkdir/sl-rust"]
+	path = git_wkdir/sl-rust
+	url = https://github.com/skade/sl-rust
+[submodule "git_wkdir/rmatrix"]
+	path = git_wkdir/rmatrix
+	url = https://github.com/Fierthraix/rmatrix
+[submodule "git_wkdir/broot"]
+	path = git_wkdir/broot
+	url = https://github.com/Canop/broot
+[submodule "git_wkdir/starship"]
+	path = git_wkdir/starship
+	url = https://github.com/starship/starship.git

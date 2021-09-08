@@ -10,9 +10,15 @@ members = [
 	"lemoninfo",
 	"tock",
 	"mdcat",
+	"fd",
+	"xplr",
 ]
 
 exclude = [ 
+	"starship",
 	"leftwm",
-    "ripgrep",
+    	"ripgrep",
+	"broot",
+	"sl-rust",
+	"rmatrix",
 ]

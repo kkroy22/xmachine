@@ -1,6 +1,6 @@
 [usr_var]
 ;(screen - ((screen * 0.75) + 2))
-wifi_n = wls8
+wifi_n = wlan0
 bar_2_x_offset = 747
 
 [colors]
@@ -80,7 +80,7 @@ label-warn-foreground = #f00
 inherit = module/temperature
 thermal-zone = 0
 ;acpitz
-hwmon-path = /sys/devices/virtual/thermal/thermal_zone0/hwmon0/temp1_input
+hwmon-path = /sys/devices/virtual/thermal/thermal_zone0/hwmon1/temp1_input
 label = 01%temperature-c%
 label-warn = 01%temperature-c%
 
@@ -88,7 +88,7 @@ label-warn = 01%temperature-c%
 inherit = module/temperature
 thermal-zone = 1
 ;pch_skylake
-hwmon-path = /sys/devices/virtual/thermal/thermal_zone1/hwmon1/temp1_input 
+hwmon-path = /sys/devices/virtual/thermal/thermal_zone3/hwmon2/temp1_input 
 label = 11%temperature-c%
 label-warn = 11%temperature-c%
 
@@ -96,7 +96,7 @@ label-warn = 11%temperature-c%
 inherit = module/temperature
 thermal-zone = 2
 ;TSKN:dell_smm: CPU 
-hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp1_input
+hwmon-path = /sys/devices/virtual/hwmon/hwmon3/temp1_input
 label = 21%temperature-c%
 label-warn = 21%temperature-c%
 
@@ -104,7 +104,7 @@ label-warn = 21%temperature-c%
 inherit = module/temperature
 thermal-zone = 3
 ;INT3400 Thermal:dell_smm: Ambient 
-hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp2_input 
+hwmon-path = /sys/devices/virtual/hwmon/hwmon3/temp2_input 
 label = 31%temperature-c%
 label-warn = 31%temperature-c%
 
@@ -112,7 +112,7 @@ label-warn = 31%temperature-c%
 inherit = module/temperature
 thermal-zone = 4
 ;TMEM:dell_smm: SODIMM 
-hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp3_input
+hwmon-path = /sys/devices/virtual/hwmon/hwmon3/temp3_input
 label = 41%temperature-c%
 label-warn = 41%temperature-c%
 
@@ -120,7 +120,7 @@ label-warn = 41%temperature-c%
 inherit = module/temperature
 thermal-zone = 5
 ;B0D4:dell_smm: Other 
-hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp4_input
+hwmon-path = /sys/devices/virtual/hwmon/hwmon3/temp4_input
 label = 51%temperature-c%
 label-warn = 51%temperature-c%
 
@@ -128,7 +128,7 @@ label-warn = 51%temperature-c%
 inherit = module/temperature
 thermal-zone = 6
 ;coretemp:x86_pkg_temp: Package id 0
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input
 label = 63%temperature-c%
 label-warn = 63%temperature-c%
 
@@ -136,7 +136,7 @@ label-warn = 63%temperature-c%
 inherit = module/temperature
 thermal-zone = 6
 ;coretemp:x86_pkg_temp: Core 0 
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp2_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon5/temp2_input
 label = 63%temperature-c%
 label-warn = 63%temperature-c%
 
@@ -144,7 +144,7 @@ label-warn = 63%temperature-c%
 inherit = module/temperature
 thermal-zone = 6
 ;coretemp:x86_pkg_temp: Core 1 
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp3_input 
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon5/temp3_input 
 label = 63%temperature-c%
 label-warn = 63%temperature-c%
 
@@ -152,7 +152,7 @@ label-warn = 63%temperature-c%
 inherit = module/temperature
 thermal-zone = 7
 ;iwlwifi_1
-hwmon-path = /sys/devices/virtual/thermal/thermal_zone7/hwmon4/temp1_input 
+hwmon-path = /sys/devices/virtual/thermal/thermal_zone6/hwmon4/temp1_input 
 label = 71%temperature-c%
 label-warn = 71%temperature-c%
 

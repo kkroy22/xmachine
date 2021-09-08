@@ -1,22 +1,52 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" VIM PLUG
 call plug#begin('~/.vim/plugged')
 	Plug 'lotabout/skim', { 'do': './install' }
-	Plug 'vim-airline/vim-airline'					" VIM Statusbar
-	Plug 'vim-airline/vim-airline-themes'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}			" VIM coc 
 	Plug 'morhetz/gruvbox'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" Theme
+function! StatuslineGitBranch()
+  let b:gitbranch=""
+  if &modifiable
+    try
+      let l:dir=expand('%:p:h')
+      let l:gitrevparse = system("git -C ".l:dir." rev-parse --abbrev-ref HEAD")
+      if !v:shell_error
+        let b:gitbranch="(".substitute(l:gitrevparse, '\n', '', 'g').")"
+      endif
+    catch
+    endtry
+  endif
+endfunction
+
+augroup GetGitBranch
+  autocmd!
+  autocmd VimEnter,WinEnter,BufEnter * call StatuslineGitBranch()
+augroup END
+
 set background=dark
 colorscheme gruvbox
+
+"set mouse=a
+set guicursor=
+set nowrap
+set noshowmode
+set noswapfile
+set nohlsearch
+set noshowcmd
+set shiftwidth=4
+set ignorecase
+set statusline=\ %{b:gitbranch}\ %f\ (%l:%c)
+set statusline+=%=
+set statusline+=%L\ %{strftime(\"%a\ %d\ %b\ %Y\ %I:%M\ %p\")}\ %n
 
 let mapleader = ";"	
 noremap <F1> :echo "--- F1 ---"<CR>
 nnoremap <leader>1 :e $MYVIMRC<CR>
 nnoremap <leader>2 :source $MYVIMRC<CR>
-nnoremap <leader>3 :Explore<CR>
-nnoremap <leader>4 :SK<CR>
+nnoremap <leader>3 :SK<CR>
+nnoremap <leader>4 :Explore<CR>
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
@@ -26,17 +56,15 @@ nmap <C-h> :vertical resize -4<CR>
 nmap <C-l> :vertical resize +4<CR>
 nmap <C-k> :resize +4<CR>
 nmap <C-j> :resize -4<CR>
-nnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
+nnoremap <leader>w :wa<CR>
+nnoremap <leader>q :q!<CR>
 
-nnoremap <leader>. :CocAction<CR>
-nnoremap <leader>; :CocDiagnostics<CR>
+nnoremap <leader>e :CocCommand explorer<CR>
+nnoremap <leader>, :silent execute "!rustfmt %"<CR>
+nnoremap <leader>r :!cd %:h && cargo run<CR>
+nnoremap <leader>c :!cd %:h && cargo check<CR>
+nnoremap <leader>t :!cd %:h && cargo test<CR>
 
-nnoremap <leader>' :!cargo fmt<CR>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" plug setting
-let g:airline#extensions#whitespace#enabled = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" others
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
@@ -50,7 +78,7 @@ set nobackup
 set nowritebackup
 
 " Give more space for displaying messages.
-set cmdheight=2
+set cmdheight=1
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.

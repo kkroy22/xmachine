@@ -1,36 +1,23 @@
-ip a
-dhclient
-nano /etc/apt/sources.list
-apt install firmware-iwlwifi
-modprobe -r iwlwifi
-modprobe iwlwifi
-apt install iwd
-iwctl 
-dhclient
-apt install git
-apt install curl
-apt install build-essential
-apt install libxinerama-dev
-apt install libxft-dev
-apt install xinit
-apt install libxrandr-dev
-apt install libxrandr-dev
-apt install firefox-esr
-apt install alsa-utils
-amixer sset Master unmute
-alsamixer 
-speaker-test 
-apt install ffmpeg obs-studio
-dmesg
-cd /usr/share/X11/xorg.conf.d/
-nano 40-libinput.conf 
-timedatectl list-timezones
 timedatectl set-timezone Asia/Kolkata
-date
-apt install unzip
-fdisk -l
-cd /mnt/
-mkdir kngstn
-mount /dev/sdb1 /mnt/kngstn/
-cd /mnt/kngstn/
-umount /mnt/kngstn/
+vi /sys/class/backlight/intel_backlight/brightness 
+vi /usr/share/X11/xorg.conf.d/40-libinput.conf 
+vi /etc/apt/sources.list
+apt install firmware-iwlwifi iwd
+modprobe -r iwlwifi
+modprobe iwlwifi 
+curl -fsSL https://download.docker.com/linux/debian/gpg > docker-gpg
+apt-key add docker-gpg 
+apt-key fingerprint  0EBFCD88
+apt install build-essential gdb valgrind 
+apt install alsa-utils curl unzip vim git 
+apt install docker-ce docker-ce-cli containerd.io
+apt install xinit compton firefox-esr kitty rofi ffmpeg feh bspwm sxhkd polybar obs-studio mypaint inkscape tshark
+amixer sset Master unmute
+speaker-test
+Time set to local rtc
+timedatectl set-local-rtc 1
+timedatectl set-timezone Asia/Kolkata
+apt purge vim
+apt install libssl-dev pkg-config
+############################################
+############################################
