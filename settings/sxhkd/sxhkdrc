@@ -13,6 +13,9 @@ super + shift + Return
 super + p
     rofi -show run
 
+super + shift + l
+    xsecurelock
+
 #Set the window state
 super + {t,s,f}
 	bspc node -t {tiled,floating,fullscreen}
