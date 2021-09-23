@@ -34,7 +34,6 @@ else
     PS1=$NIXPS1
 fi
 
-
 BXX=$HOME/.config/appdata
 GXX=$BXX/xmachine/git_wkdir
 
@@ -44,18 +43,15 @@ CXX=$GXX/target/release
 SXX=$GXX/scripts
 
 SXHKD=$HOME/.config/sxhkd/sxhkdrc
-NVIM=$HOME/.config/appdata/nvim/squashfs-root/usr/bin
 NODE=$HOME/.config/appdata/node/bin
 
+NVIM=$HOME/.config/appdata/nvim/bin
 SHP=$GXX/starship/target/release
 LWM=$GXX/leftwm/target/release
 RGP=$GXX/ripgrep/target/release
 OOT=$GXX/broot/target/release
 
-CODE=$HOME/.config/appdata/vscode
-GKRN=$HOME/.config/appdata/gitkraken
-
-PATH=$PATH:$LXX:$CARGO:$CXX:$SXX:$SXHKD:$NVIM:$NODE:$SHP:$LWM:$RGP:$OOT:$CODE:$GKRN
+PATH=$PATH:$LXX:$CARGO:$CXX:$SXX:$SXHKD:$NVIM:$NODE:$SHP:$LWM:$RGP:$OOT
 
 eval "$(starship init bash)"
 alias vi="nvim"

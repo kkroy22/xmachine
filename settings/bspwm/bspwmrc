@@ -9,7 +9,7 @@ else
 fi
 
 sxhkd -c $SXHKD &
-compton &
+picom &
 $HOME/.config/feh/bg.sh &
 $HOME/.config/polybar/launch.sh &
 
