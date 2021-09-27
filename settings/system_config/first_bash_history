@@ -8,7 +8,7 @@ modprobe iwlwifi
 curl -fsSL https://download.docker.com/linux/debian/gpg > docker-gpg
 apt-key add docker-gpg 
 apt-key fingerprint  0EBFCD88
-apt install build-essential gdb valgrind 
+apt install build-essential gdb valgrind libncurses-dev
 apt install alsa-utils curl unzip git snapd dbus-x11
 apt install docker-ce docker-ce-cli containerd.io
 apt install xinit picom kitty rofi ffmpeg feh bspwm sxhkd polybar mypaint tshark

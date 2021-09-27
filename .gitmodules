@@ -49,3 +49,6 @@
 [submodule "git_wkdir/starship"]
 	path = git_wkdir/starship
 	url = https://github.com/starship/starship.git
+[submodule "git_wkdir/gitui"]
+	path = git_wkdir/gitui
+	url = https://github.com/extrawurst/gitui.git

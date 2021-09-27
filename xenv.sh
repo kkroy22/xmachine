@@ -1,4 +1,6 @@
-GIT_REPO="$HOME/.config/appdata/xmachine"
+BXX=$HOME/.config/appdata
+GXX=$BXX/xmachine/git_wkdir
+GIT_REPO=$BXX/xmachine
 
 XUR="kroy"
 
@@ -34,26 +36,34 @@ else
     PS1=$NIXPS1
 fi
 
-BXX=$HOME/.config/appdata
-GXX=$BXX/xmachine/git_wkdir
+
 
 LXX=$BXX/local_bin
-CARGO=$HOME/.cargo/bin
 CXX=$GXX/target/release
 SXX=$GXX/scripts
-
-SXHKD=$HOME/.config/sxhkd/sxhkdrc
-NODE=$HOME/.config/appdata/node/bin
+CARGO=$HOME/.cargo/bin
 
 NVIM=$HOME/.config/appdata/nvim/bin
+NODE=$HOME/.config/appdata/node/bin
+GOLAN=$HOME/.config/appdata/golang/bin
+
+SXHKD=$HOME/.config/sxhkd/sxhkdrc
 SHP=$GXX/starship/target/release
 LWM=$GXX/leftwm/target/release
 RGP=$GXX/ripgrep/target/release
-OOT=$GXX/broot/target/release
+GITUI=$GXX/gitui/target/release
 
-PATH=$PATH:$LXX:$CARGO:$CXX:$SXX:$SXHKD:$NVIM:$NODE:$SHP:$LWM:$RGP:$OOT
+PATH=$PATH:$BXX:$CXX:$SXX:$CARGO:$NVIM:$NODE:$GOLAN:$SXHKD:$SHP:$LWM:$RGP:$GITUI
 
 eval "$(starship init bash)"
 alias vi="nvim"
 alias vim="nvim"
 alias gg="cd $GIT_REPO"
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+export XSECURELOCK_NO_COMPOSITE=1
+export XSECURELOCK_DISCARD_FIRST_KEYPRESS=0
+export XSECURELOCK_PASSWORD_PROMPT=disco 
+export XSECURELOCK_SHOW_DATETIME=1
+export XSECURELOCK_SINGLE_AUTH_WINDOW=1
+export XSECURELOCK_AUTH_TIMEOUT=30

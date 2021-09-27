@@ -3,22 +3,23 @@ members = [
 	"procs", #3
 	"bat",  # 6
 	"lsd",  # 17
-	"bottom", #32
 	"hyperfine", # 74
 	"skim", #148
 	"exa",  # 297
-	"lemoninfo",
 	"tock",
 	"mdcat",
 	"xplr",
+	"rmatrix",
+	"fd",
+	"broot",
+	"sl-rust",
 ]
 
 exclude = [ 
-	"fd",
-	"starship",
+	"lemoninfo",
 	"leftwm",
     	"ripgrep",
-	"broot",
-	"sl-rust",
-	"rmatrix",
+	"starship",
+	"gitui",
+	"bottom", #32
 ]
