@@ -1,11 +1,11 @@
 [workspace]
 members = [
-	"procs", #3
-	"bat",  # 6
-	"lsd",  # 17
-	"hyperfine", # 74
-	"skim", #148
-	"exa",  # 297
+	"procs",
+	"bat",
+	"lsd",
+	"hyperfine",
+	"skim",
+	"exa",
 	"tock",
 	"mdcat",
 	"xplr",
@@ -21,5 +21,6 @@ exclude = [
     	"ripgrep",
 	"starship",
 	"gitui",
-	"bottom", #32
+	"bottom",
+	"lazygit", # go
 ]

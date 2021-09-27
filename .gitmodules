@@ -52,3 +52,6 @@
 [submodule "git_wkdir/gitui"]
 	path = git_wkdir/gitui
 	url = https://github.com/extrawurst/gitui.git
+[submodule "git_wkdir/lazygit"]
+	path = git_wkdir/lazygit
+	url = https://github.com/jesseduffield/lazygit.git

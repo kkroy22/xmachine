@@ -40,12 +40,13 @@ fi
 
 LXX=$BXX/local_bin
 CXX=$GXX/target/release
+OXX=$HOME/go/bin
 SXX=$GXX/scripts
 CARGO=$HOME/.cargo/bin
 
 NVIM=$HOME/.config/appdata/nvim/bin
 NODE=$HOME/.config/appdata/node/bin
-GOLAN=$HOME/.config/appdata/golang/bin
+GOLAN=$HOME/.config/appdata/go/bin
 
 SXHKD=$HOME/.config/sxhkd/sxhkdrc
 SHP=$GXX/starship/target/release
@@ -53,7 +54,7 @@ LWM=$GXX/leftwm/target/release
 RGP=$GXX/ripgrep/target/release
 GITUI=$GXX/gitui/target/release
 
-PATH=$PATH:$BXX:$CXX:$SXX:$CARGO:$NVIM:$NODE:$GOLAN:$SXHKD:$SHP:$LWM:$RGP:$GITUI
+PATH=$PATH:$BXX:$CXX:$OXX:$SXX:$CARGO:$NVIM:$NODE:$GOLAN:$SXHKD:$SHP:$LWM:$RGP:$GITUI
 
 eval "$(starship init bash)"
 alias vi="nvim"
