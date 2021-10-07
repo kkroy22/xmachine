@@ -1,6 +1,6 @@
 add_newline = true
 
-format = """$jobs$time$username$directory$cmd_duration$line_break$character"""
+format = """$jobs$time$username$git_branch$directory$cmd_duration$line_break$character"""
 
 [jobs]
 threshold = 1
@@ -35,3 +35,5 @@ vicmd_symbol = "[❮](bold green)"
 [package]
 disabled = true
 
+[git_branch]
+format = '\([$branch]($style)\) '
