@@ -60,7 +60,8 @@ nnoremap <leader>w :wa<CR>
 nnoremap <leader>q :q!<CR>
 
 nnoremap <leader>e :CocCommand explorer<CR>
-nnoremap <leader>, :silent execute "!rustfmt %"<CR>
+nnoremap <leader>, :!cargo fmt<CR>
+nnoremap <leader>. :CocAction<CR>
 nnoremap <leader>r :!cd %:h && cargo run<CR>
 nnoremap <leader>c :!cd %:h && cargo check<CR>
 nnoremap <leader>t :!cd %:h && cargo test<CR>
