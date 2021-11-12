@@ -1,7 +1,6 @@
 [usr_var]
 ;(screen - ((screen * 0.75) + 2))
 wifi_n = enp2s0
-bar_2_x_offset = 573
 
 [colors]
 background = #2E3440
@@ -34,34 +33,28 @@ module-margin-right = 2
 [bar/one]
 monitor = HDMI-0 
 inherit = bar/main
-width = 20%
+width = 15%
 offset-x = 2
 modules-center = time
 
 [bar/two]
 monitor = HDMI-0
 inherit = bar/main
-width = 70%
-offset-x = ${usr_var.bar_2_x_offset} 
+width = 45%
+offset-x = 450 
 modules-center = xwksp xwindow network tz3h2t1 tz3h2t2 tz3h2t3 tz3h2t4 tz3h2t5 tz3h2t6 tz3h2t7
 
 [bar/three]
-monitor = DVI-D-0
+monitor = HDMI-0
 inherit = bar/main
-width = 20%
-offset-x = 2
-modules-center = time
+width = 30%
+offset-x = 1342 
+modules-center = cpu memory
 
-[bar/four]
-monitor = DVI-D-0
-inherit = bar/main
-width = 70%
-offset-x = 322 
-modules-center = xwksp cpu memory
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:50:...%
 
 [module/bspwm]
 type = internal/bspwm
