@@ -55,3 +55,6 @@
 [submodule "git_wkdir/lazygit"]
 	path = git_wkdir/lazygit
 	url = https://github.com/jesseduffield/lazygit.git
+[submodule "git_wkdir/tokei"]
+	path = git_wkdir/tokei
+	url = https://github.com/XAMPPRocky/tokei.git
