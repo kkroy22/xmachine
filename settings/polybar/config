@@ -1,7 +1,6 @@
 [usr_var]
 ;(screen - ((screen * 0.75) + 2))
 wifi_n = wlan0
-bar_2_x_offset = 747
 
 [colors]
 background = #2E3440
