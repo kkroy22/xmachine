@@ -53,8 +53,9 @@ SHP=$GXX/starship/target/release
 LWM=$GXX/leftwm/target/release
 RGP=$GXX/ripgrep/target/release
 GITUI=$GXX/gitui/target/release
+POST=$HOME/.config/appdata/postman/
 
-PATH=$PATH:$BXX:$CXX:$OXX:$SXX:$CARGO:$NVIM:$NODE:$GOLAN:$SXHKD:$SHP:$LWM:$RGP:$GITUI
+PATH=$PATH:$BXX:$CXX:$OXX:$SXX:$CARGO:$NVIM:$NODE:$GOLAN:$SXHKD:$SHP:$LWM:$RGP:$GITUI:$POST
 
 eval "$(starship init bash)"
 alias vi="nvim"

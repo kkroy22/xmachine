@@ -15,7 +15,7 @@ fi
 
 $HOME/.config/polybar/launch.sh &
 $HOME/.config/feh/bg.sh &
-picom &
+#picom &
 
 bspc config border_width         0
 bspc config window_gap           2 
