@@ -47,6 +47,7 @@ CARGO=$HOME/.cargo/bin
 NVIM=$HOME/.config/appdata/nvim/bin
 NODE=$HOME/.config/appdata/node/bin
 GOLAN=$HOME/.config/appdata/go/bin
+IDEA=$HOME/.config/appdata/idea/bin
 
 SXHKD=$HOME/.config/sxhkd/sxhkdrc
 SHP=$GXX/starship/target/release
@@ -55,7 +56,7 @@ RGP=$GXX/ripgrep/target/release
 GITUI=$GXX/gitui/target/release
 POST=$HOME/.config/appdata/postman/
 
-PATH=$PATH:$BXX:$CXX:$OXX:$SXX:$CARGO:$NVIM:$NODE:$GOLAN:$SXHKD:$SHP:$LWM:$RGP:$GITUI:$POST
+PATH=$PATH:$BXX:$CXX:$OXX:$SXX:$CARGO:$NVIM:$NODE:$GOLAN:$SXHKD:$SHP:$LWM:$RGP:$GITUI:$POST:$IDEA
 
 eval "$(starship init bash)"
 alias vi="nvim"

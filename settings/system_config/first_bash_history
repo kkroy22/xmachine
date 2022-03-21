@@ -3,6 +3,6 @@ apt install firmware-iwlwifi iwd
 modprobe iwlwifi
 systemctl start iwd
 iwctl 
-apt install build-essential gdb valgrind lcov libssl-dev pkg-config
+apt install build-essential gdb valgrind linux-perf lcov libpq-dev libssl-dev pkg-config
 apt install dbus-x11 alsa-utils pulseaudio git snapd curl unzip
 apt install xinit picom kitty rofi feh bspwm sxhkd polybar

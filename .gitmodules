@@ -58,3 +58,6 @@
 [submodule "git_wkdir/flamegraph"]
 	path = git_wkdir/flamegraph
 	url = https://github.com/flamegraph-rs/flamegraph
+[submodule "git_wkdir/tokei"]
+	path = git_wkdir/tokei
+	url = https://github.com/XAMPPRocky/tokei.git

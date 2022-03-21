@@ -1,13 +1,11 @@
 #! /bin/sh
 
 sxhkd -c $SXHKD &
-if xrandr -q | grep 'DVI-D-0 connected' > /dev/null; then
+if xrandr -q | grep 'VGA-0 connected' > /dev/null; then
     $HOME/.config/bspwm/external.sh &
-    bspc monitor DVI-D-0 -d I II 
-    bspc monitor HDMI-0  -d III IV V VI VII 
-    bspc monitor VGA-0  -d VIII IX 
-    bspc config -m DVI-D-0 top_padding          27
-    bspc config -m HDMI-0 top_padding          27
+    bspc monitor HDMI-0 -d I
+    bspc monitor VGA-0 -d II III IV V VI VII VIII IX
+    bspc config -m HDMI-0  top_padding          27
 else 
     bspc monitor -d I II III IV V VI VII VIII IX 
     bspc config top_padding          27
