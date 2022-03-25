@@ -5,4 +5,4 @@ systemctl start iwd
 iwctl 
 apt install build-essential gdb valgrind linux-perf lcov libpq-dev libssl-dev pkg-config
 apt install dbus-x11 alsa-utils pulseaudio git snapd curl unzip
-apt install xinit picom kitty rofi feh bspwm sxhkd polybar
+apt install xinit picom kitty rofi feh bspwm sxhkd polybar ntfs-3g
