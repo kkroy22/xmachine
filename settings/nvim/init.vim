@@ -63,7 +63,8 @@ nnoremap <leader>e :CocCommand explorer<CR>
 nnoremap <leader>d :CocDiagnostics<CR>
 nnoremap <leader>, :!cargo fmt<CR>
 nnoremap <leader>. :CocAction<CR>
-nnoremap <leader>r :!cd %:h && make run<CR>
+nnoremap <leader>r :!cd %:h && cargo run<CR>
+nnoremap <leader>t :!cd %:h && cargo test<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" others
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some

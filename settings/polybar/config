@@ -32,7 +32,7 @@ module-margin-right = 2
 
 [bar/one]
 inherit = bar/main
-modules-center = time tz0h0t1 tz1h1t1 tz2h2t1 tz3h2t2 tz4h2t3 tz5h2t4 tz6h3t1 tz6h3t2 tz6h3t3 tz7h4t1 cpu memory
+modules-center = time network tz0h0t1 tz1h1t1 tz2h2t1 tz3h2t2 tz4h2t3 tz5h2t4 tz6h3t1 tz6h3t2 tz6h3t3 tz7h4t1 cpu memory xwksp
 
 [module/xwksp]
 type = internal/xworkspaces
@@ -212,7 +212,7 @@ unknown-as-up = true
 format-connected = <ramp-signal> <label-connected>
 format-disconnected = <label-disconnected>
 format-packetloss = <animation-packetloss> <label-connected>
-label-connected = %essid% %downspeed:9%
+label-connected = %essid% %upspeed:9% %downspeed:9%
 label-connected-foreground = #eefafafa
 label-disconnected = not connected
 label-disconnected-foreground = #66ffffff
