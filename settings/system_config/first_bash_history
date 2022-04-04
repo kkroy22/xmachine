@@ -4,5 +4,5 @@ modprobe iwlwifi
 systemctl start iwd
 iwctl 
 apt install build-essential gdb valgrind linux-perf lcov libpq-dev libssl-dev pkg-config
-apt install dbus-x11 alsa-utils pulseaudio git snapd curl unzip
-apt install xinit picom kitty rofi feh bspwm sxhkd polybar ntfs-3g
+apt install dbus-x11 alsa-utils pulseaudio git snapd curl unzip pavucontrol arandr
+apt install xinit picom kitty rofi feh bspwm sxhkd polybar ntfs-3g mypaint obs-studio gnome-keyring ffmpeg nautilus 
