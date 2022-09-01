@@ -22,5 +22,6 @@ exclude = [
 	"starship",
 	"gitui",
 	"bottom",
+	"zola",
 	"lazygit", # go
 ]

@@ -1,6 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" VIM PLUG
 call plug#begin('~/.vim/plugged')
-	Plug 'lotabout/skim', { 'do': './install' }
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}			" VIM coc 
 	Plug 'morhetz/gruvbox'
 call plug#end()
@@ -45,7 +45,7 @@ let mapleader = ";"
 noremap <F1> :echo "--- F1 ---"<CR>
 nnoremap <leader>1 :e $MYVIMRC<CR>
 nnoremap <leader>2 :source $MYVIMRC<CR>
-nnoremap <leader>3 :SK<CR>
+nnoremap <leader>3 :FZF<CR>
 nnoremap <leader>4 :Explore<CR>
 noremap <Up> <Nop>
 noremap <Down> <Nop>
@@ -64,7 +64,7 @@ nnoremap <leader>d :CocDiagnostics<CR>
 nnoremap <leader>, :!cargo fmt<CR>
 nnoremap <leader>. :CocAction<CR>
 nnoremap <leader>r :!cd %:h && cargo run<CR>
-nnoremap <leader>t :!cd %:h && cargo test<CR>
+nnoremap <leader>t :!cd %:h && cargo test --no-fail-fast -- --show-output<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" others
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some

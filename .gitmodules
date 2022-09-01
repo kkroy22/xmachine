@@ -61,3 +61,6 @@
 [submodule "git_wkdir/tokei"]
 	path = git_wkdir/tokei
 	url = https://github.com/XAMPPRocky/tokei.git
+[submodule "git_wkdir/zola"]
+	path = git_wkdir/zola
+	url = https://github.com/getzola/zola.git

@@ -32,7 +32,26 @@ module-margin-right = 2
 
 [bar/one]
 inherit = bar/main
-modules-center = time network tz0h0t1 tz1h1t1 tz2h2t1 tz3h2t2 tz4h2t3 tz5h2t4 tz6h3t1 tz6h3t2 tz6h3t3 tz7h4t1 cpu memory xwksp
+modules-center = TaipeiStandardTime time network tz0h0t1 tz1h1t1 tz2h2t1 tz3h2t2 tz4h2t3 tz5h2t4 tz6h3t1 tz6h3t2 tz6h3t3 tz7h4t1 cpu memory xwksp
+
+[module/TaipeiStandardTime]
+type = custom/script
+exec = TZ=Asia/Singapore date +"TST: %I:%M"
+interval = 1
+
+[module/time]
+type = internal/date
+interval = 1
+date = %a, %d %B
+time = %I:%M %
+format-prefix = 
+format-prefix-foreground = ${colors.accent}
+format = <label>
+label = "  %date% | %time% "
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
 
 [module/xwksp]
 type = internal/xworkspaces
@@ -146,20 +165,6 @@ thermal-zone = 7
 hwmon-path = /sys/devices/virtual/thermal/thermal_zone6/hwmon4/temp1_input 
 label = 71%temperature-c%
 label-warn = 71%temperature-c%
-
-[module/time]
-type = internal/date
-interval = 1
-date = %a, %d %B
-time = %I:%M %
-format-prefix = 
-format-prefix-foreground = ${colors.accent}
-format = <label>
-label = "  %date% | %time% "
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
-date-alt = %A, %d %B %Y
-time-alt = %H:%M:%S
 
 [module/battery]
 type = internal/battery
