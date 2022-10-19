@@ -67,3 +67,6 @@
 [submodule "bytehound"]
 	path = bytehound
 	url = git@github.com:koute/bytehound.git
+[submodule "git_wkdir/bytehound"]
+	path = git_wkdir/bytehound
+	url = git@github.com:koute/bytehound.git
