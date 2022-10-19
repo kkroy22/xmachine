@@ -64,3 +64,6 @@
 [submodule "git_wkdir/zola"]
 	path = git_wkdir/zola
 	url = https://github.com/getzola/zola.git
+[submodule "bytehound"]
+	path = bytehound
+	url = git@github.com:koute/bytehound.git
