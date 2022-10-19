@@ -24,4 +24,5 @@ exclude = [
 	"bottom",
 	"zola",
 	"lazygit", # go
+	"bytehound",
 ]

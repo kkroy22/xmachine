@@ -13,7 +13,7 @@ super + shift + Return
 super + p
     rofi -show run
 
-super + shift + l
+super + ctrl + l
     xsecurelock
 
 #Set the window state

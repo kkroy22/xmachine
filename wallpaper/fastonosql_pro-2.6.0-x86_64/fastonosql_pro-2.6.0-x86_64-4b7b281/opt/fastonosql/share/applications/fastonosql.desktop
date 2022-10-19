@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=fastonosql
+Name=FastoNoSQL
+GenericName=The IDE for redis working.
+GenericName[de]=Die IDE der
+Icon=fastonosql.png
+Terminal=false
+Categories=Development;IDE;redis;

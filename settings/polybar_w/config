@@ -31,26 +31,16 @@ module-margin-left = 2
 module-margin-right = 2
 
 [bar/one]
-monitor = DVI-D-0 
+monitor = HDMI-2
 inherit = bar/main
-width = 15%
+width = 100%
 offset-x = 2
-modules-center = time
+modules-center = xwksp TaipeiStandardTime cpu memory network xwindow 
 
-[bar/two]
-monitor = DVI-D-0 
-inherit = bar/main
-width = 45%
-offset-x = 450 
-modules-center = xwksp xwindow network tz3h2t1 tz3h2t2 tz3h2t3 tz3h2t4 tz3h2t5 tz3h2t6 tz3h2t7
-
-[bar/three]
-monitor = DVI-D-0 
-inherit = bar/main
-width = 30%
-offset-x = 1342 
-modules-center = cpu memory
-
+[module/TaipeiStandardTime]                                                                                                        
+type = custom/script                                                                                                               
+exec = TZ=Asia/Singapore date +"TST: %I:%M"                                                                                        
+interval = 1   
 
 [module/xwindow]
 type = internal/xwindow

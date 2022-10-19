@@ -58,8 +58,9 @@ POST=$HOME/.config/appdata/postman/
 
 WORK=$HOME/.config/appdata/workcomposer/squashfs-root
 ZOLA=$GXX/zola/target/release
+CLION=$HOME/.config/appdata/clion/bin
 
-PATH=$PATH:$BXX:$CXX:$OXX:$SXX:$CARGO:$NVIM:$LXX:$NODE:$GOLAN:$SXHKD:$SHP:$LWM:$RGP:$GITUI:$POST:$ANDROID:$WORK:$ZOLA
+PATH=$PATH:$BXX:$CXX:$OXX:$SXX:$CARGO:$NVIM:$LXX:$NODE:$GOLAN:$SXHKD:$SHP:$LWM:$RGP:$GITUI:$POST:$ANDROID:$WORK:$ZOLA:$CLION
 
 eval "$(starship init bash)"
 alias vi="nvim"
